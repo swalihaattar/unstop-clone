@@ -1,4 +1,3 @@
-```sql
 -- ============================================================
 -- Unstop Clone - Database Schema
 -- Run this file in MySQL to set up the database
@@ -324,4 +323,3 @@ VALUES
         1,
         'open'
     );
-```
