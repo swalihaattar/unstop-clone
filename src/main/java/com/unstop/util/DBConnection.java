@@ -18,7 +18,7 @@ public class DBConnection {
     // Read values from OS environment variables so secrets are not committed to Git.
     // Values are still available as safe local defaults for a quick setup.
     private static final String URL = System.getenv().getOrDefault(
-            "DB_URL", "jdbc:mysql://localhost:3306/unstop_clone?useSSL=false&serverTimezone=UTC");
+            "DB_URL", "DB_CONN");
     private static final String USERNAME = System.getenv().getOrDefault("DB_USERNAME", "root");
     private static final String PASSWORD = System.getenv().getOrDefault("DB_PASSWORD", "root");
 
