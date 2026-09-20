@@ -1,0 +1,192 @@
+/* Dashboard.css - Styles for the React dashboard app */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f8f7ff;
+    color: #1a1a2e;
+}
+
+.react-dashboard {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.rd-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #6c47ff, #8b5cf6);
+    border-radius: 16px;
+    color: white;
+}
+
+.rd-header h1 { font-size: 2rem; margin-bottom: 0.4rem; }
+.rd-header p  { opacity: 0.85; }
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 1.2rem;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 999px;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.search-input:focus { border-color: #6c47ff; box-shadow: 0 0 0 3px rgba(108,71,255,0.1); }
+
+.rd-filter-bar {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+}
+
+.filter-pill {
+    padding: 0.4rem 1.1rem;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 999px;
+    background: white;
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #4b5563;
+}
+.filter-pill:hover, .filter-pill.active {
+    background: #6c47ff;
+    color: white;
+    border-color: #6c47ff;
+}
+
+.rd-stats {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+}
+
+.rd-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.rc-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.rc-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 16px rgba(108,71,255,0.12);
+}
+
+.rc-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.rc-card h3 { font-size: 1.05rem; flex: 1; line-height: 1.3; }
+
+.rc-desc { color: #4b5563; font-size: 0.9rem; line-height: 1.5; }
+
+.rc-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 0.82rem;
+    color: #6b7280;
+}
+
+.rc-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.8rem;
+    border-top: 1px solid #f3f4f6;
+    margin-top: auto;
+}
+
+.rc-btn {
+    background: #6c47ff;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.rc-btn:hover { background: #5535e0; }
+
+/* Badges */
+.rc-badge {
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.rc-badge-hackathon { background: #ede9ff; color: #6c47ff; }
+.rc-badge-quiz      { background: #fef3c7; color: #92400e; }
+.rc-badge-coding    { background: #dbeafe; color: #1e40af; }
+.rc-badge-design    { background: #fce7f3; color: #9d174d; }
+.rc-badge-case-study{ background: #dcfce7; color: #166534; }
+.rc-badge-open      { background: #dcfce7; color: #166534; }
+
+/* Loading */
+.rd-status {
+    text-align: center;
+    padding: 3rem;
+    color: #9ca3af;
+}
+
+.spinner {
+    width: 36px; height: 36px;
+    border: 3px solid #e5e7eb;
+    border-top-color: #6c47ff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.rd-error {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.retry-btn {
+    background: #991b1b;
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.rd-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: #9ca3af;
+    font-size: 1.1rem;
+}
