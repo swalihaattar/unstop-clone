@@ -1,6 +1,7 @@
 -- ============================================================
 -- Unstop Clone - Database Schema
 -- Run this file in MySQL to set up the database
+-- Run each section separately during setup
 -- ============================================================
 
 CREATE DATABASE IF NOT EXISTS unstop_clone;
